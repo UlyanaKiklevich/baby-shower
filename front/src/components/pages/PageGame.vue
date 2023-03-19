@@ -3,10 +3,10 @@
     <AppHeader :counter="counter"/>
     <div class="content p-2 bg-[#FFFBF6] grow flex flex-wrap gap-2 justify-around">
       <SelectOption
-        v-for="option in sortedNames"
-        v-model="selectedOption"
-        :key="option.key"
-        :option="option"
+          v-for="option in sortedNames"
+          v-model="selectedOption"
+          :key="option.key"
+          :option="option"
       />
     </div>
     <AppFooter
@@ -14,16 +14,17 @@
         :counter="counter"
         @clear="clearInput"
     />
+    <router-view/>
   </div>
 </template>
 
 <script setup>
-import AppHeader from '@/components/AppHeader'
-import AppFooter from '@/components/AppFooter'
-import SelectOption from '@/components/SelectOption'
+import AppHeader from '@/src/components/AppHeader'
+import AppFooter from '@/src/components/AppFooter'
+import SelectOption from '@/src/components/SelectOption'
 import {computed, onMounted, ref} from 'vue'
-import names from '../data/names.json'
-import useMessenger from "../composables/useMessenger";
+import names from '../../../data/names.json'
+import useMessenger from '../../../composables/useMessenger'
 
 const selectedOption = ref()
 const counter = ref(0)
@@ -31,10 +32,10 @@ const counter = ref(0)
 const clearInput = () => {
   selectedOption.value = null
   document.querySelectorAll(`.select-option`).forEach(el => el.checked = false)
-  counter.value ++
+  counter.value++
 }
 
-const { user } = useMessenger()
+const {user} = useMessenger()
 
 onMounted(() => {
   let recaptchaScript = document.createElement('script')
@@ -44,8 +45,8 @@ onMounted(() => {
 
 const sortedNames = computed(() => {
   if (counter.value > 0) {
-  return names.sort(el => {
-      if(el.key === user.value) {
+    return names.sort(el => {
+      if (el.key === user.value) {
         return -1
       }
     })

@@ -15,7 +15,7 @@
 </template>
 <script setup>
 import {computed, defineProps} from 'vue';
-import useMessenger from "../../composables/useMessenger";
+import useMessenger from '@/composables/useMessenger'
 
 const props = defineProps({
   option: Object,

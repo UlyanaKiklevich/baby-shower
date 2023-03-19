@@ -9,7 +9,7 @@
 </template>
 <script setup>
 import { defineProps, defineEmits, computed } from 'vue'
-import useMessenger from '../../composables/useMessenger'
+import useMessenger from '@/composables/useMessenger'
 
 const props = defineProps({
   option: String,

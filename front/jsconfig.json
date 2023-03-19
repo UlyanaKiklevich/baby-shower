@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "extensions": [".js", ".vue", ".json"],
     "module": "esnext",
     "baseUrl": "./",
     "moduleResolution": "node",
     "paths": {
       "@/*": [
-        "src/*"
+        "./*"
       ]
     },
     "lib": [

@@ -2,8 +2,21 @@ import {ref} from "vue";
 
 let channel = null
 const user = ref(null)
+const results = ref({})
 
 export default () => {
+  const addUser = name => {
+    results.value[name] = []
+  }
+
+  const addAnswer = (name, question, answer) => {
+    results.value[name] = [...results.value[name], {
+      question,
+      answer,
+      isCorrect: Date.now() % 2
+    }]
+  }
+
   const createChannel = name => {
     user.value = name
     // eslint-disable-next-line no-undef
@@ -23,6 +36,9 @@ export default () => {
   return {
     createChannel,
     publish,
-    user
+    user,
+    addUser,
+    results,
+    addAnswer
   }
 }
