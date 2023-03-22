@@ -1,6 +1,6 @@
 [
   {
-    "src": "1.jpeg",
+    "src": "1.jpg",
     "answer": "wlad"
   },
   {
@@ -8,15 +8,15 @@
     "answer": "leraP"
   },
   {
-    "src": "3.jpg",
+    "src": "3.jpeg",
     "answer": "alexey"
   },
   {
-    "src": "4.JPG",
+    "src": "4.jpeg",
     "answer": "nastka"
   },
   {
-    "src": "5.jpeg",
+    "src": "5.JPG",
     "answer": ["alesia", "ula"]
   },
   {
@@ -28,15 +28,15 @@
     "answer": "obuchowski"
   },
   {
-    "src": "8.jpeg",
+    "src": "8.jpg",
     "answer": "ula"
   },
   {
-    "src": "9.jpeg",
+    "src": "9.jpg",
     "answer": "ula"
   },
   {
-    "src": "10.jpeg",
+    "src": "10.JPG",
     "answer": "obuchowski"
   },
   {
@@ -44,11 +44,11 @@
     "answer": "polina"
   },
   {
-    "src": "12.jpeg",
+    "src": "12.JPG",
     "answer": "anastasia"
   },
   {
-    "src": "13.jpg",
+    "src": "13.jpeg",
     "answer": "polina"
   },
   {
@@ -56,11 +56,11 @@
     "answer": "alesia"
   },
   {
-    "src": "15.jpeg",
+    "src": "15.jpg",
     "answer": ["alesia", "ula"]
   },
   {
-    "src": "16.jpeg",
+    "src": "16.jpg",
     "answer": "nikita"
   },
   {
@@ -72,11 +72,11 @@
     "answer": "nikita"
   },
   {
-    "src": "19.jpg",
+    "src": "19.jpeg",
     "answer": "roman"
   },
   {
-    "src": "20.jpg",
+    "src": "20.jpeg",
     "answer": "leraM"
   },
   {
@@ -84,19 +84,31 @@
     "answer": "roman"
   },
   {
-    "src": "22.jpg",
+    "src": "22.jpeg",
     "answer": "leraM"
   },
   {
-    "src": "23.jpg",
+    "src": "23.jpeg",
     "answer": "leraM"
   },
   {
-    "src": "24.jpeg",
+    "src": "24.jpg",
     "answer": "nika"
   },
   {
-    "src": "25.JPG",
+    "src": "25.jpeg",
+    "answer": "paulina"
+  },
+  {
+    "src": "26.jpeg",
+    "answer": "paulina"
+  },
+  {
+    "src": "27.jpeg",
+    "answer": "paulina"
+  },
+  {
+    "src": "28.jpeg",
     "answer": "paulina"
   }
 ]

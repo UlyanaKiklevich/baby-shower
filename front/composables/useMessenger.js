@@ -1,4 +1,5 @@
-import {ref} from "vue";
+import { ref } from 'vue'
+import names from '@/data/names.json'
 
 let channel = null
 const user = ref(null)
@@ -6,15 +7,21 @@ const results = ref({})
 
 export default () => {
   const addUser = name => {
-    results.value[name] = []
+    results.value = {
+      ...results.value,
+      [name]: []
+    }
   }
 
   const addAnswer = (name, question, answer) => {
-    results.value[name] = [...results.value[name], {
-      question,
-      answer,
-      isCorrect: Date.now() % 2
-    }]
+    results.value = {
+      ...results.value,
+      [name]: [ ...(results.value[name] || []), {
+        question,
+        answer,
+        isCorrect: Date.now() % 2
+      }]
+    }
   }
 
   const createChannel = name => {
@@ -33,12 +40,52 @@ export default () => {
     })
   }
 
+  const getCorrectPercentage = questionNum => {
+    const names = Object.keys(results.value)
+    let counter = 0
+    names.forEach(name => {
+      if (results.value[name][questionNum].isCorrect) {
+        counter ++
+      }
+    })
+
+    return Math.ceil(counter * 100 / names.length)
+  }
+
+  const getName = answer => {
+    if(Array.isArray(answer)) {
+      let r = ''
+      for(let t of answer) {
+        if (r) {
+          r += ' & '
+        }
+        r += names.find(({ key }) => key === t).title
+      }
+      return r
+    }
+
+    return names.find(({ key }) => key === answer).title
+  }
+
+  const howWasCalled = (answer, num) => {
+    const names = Object.keys(results.value)
+    const set = new Set()
+    names.forEach(name => {
+      set.add(results.value[name][num].answer)
+    })
+
+    return [ ...set ].filter(name => name !== answer).map(name => getName(name))
+  }
+
   return {
     createChannel,
     publish,
     user,
     addUser,
     results,
-    addAnswer
+    addAnswer,
+    getCorrectPercentage,
+    howWasCalled,
+    getName
   }
 }
