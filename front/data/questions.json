@@ -1,67 +1,67 @@
 [
   {
     "src": "1.jpg",
-    "answer": "wlad"
+    "answer": "leraM"
   },
   {
     "src": "2.jpeg",
-    "answer": "leraP"
+    "answer": "nika"
   },
   {
     "src": "3.jpeg",
-    "answer": "alexey"
+    "answer": ["alesia", "ula"]
   },
   {
     "src": "4.jpeg",
-    "answer": "nastka"
+    "answer": "adrian"
   },
   {
     "src": "5.JPG",
-    "answer": ["alesia", "ula"]
+    "answer": "nastka"
   },
   {
     "src": "6.jpg",
-    "answer": "alexey"
+    "answer": "leraM"
   },
   {
     "src": "7.jpeg",
-    "answer": "obuchowski"
-  },
-  {
-    "src": "8.jpg",
-    "answer": "ula"
-  },
-  {
-    "src": "9.jpg",
-    "answer": "ula"
-  },
-  {
-    "src": "10.JPG",
-    "answer": "obuchowski"
-  },
-  {
-    "src": "11.jpg",
-    "answer": "polina"
-  },
-  {
-    "src": "12.JPG",
-    "answer": "anastasia"
-  },
-  {
-    "src": "13.jpeg",
-    "answer": "polina"
-  },
-  {
-    "src": "14.jpeg",
     "answer": "alesia"
   },
   {
+    "src": "8.jpg",
+    "answer": "roman"
+  },
+  {
+    "src": "9.jpg",
+    "answer": "polina"
+  },
+  {
+    "src": "10.JPG",
+    "answer": "paulina"
+  },
+  {
+    "src": "11.jpg",
+    "answer": "roman"
+  },
+  {
+    "src": "12.JPG",
+    "answer": "zeniaB"
+  },
+  {
+    "src": "13.jpeg",
+    "answer": "nikita"
+  },
+  {
+    "src": "14.jpeg",
+    "answer": "obuchowski"
+  },
+  {
     "src": "15.jpg",
-    "answer": ["alesia", "ula"]
+    "answer": "alexey"
   },
   {
     "src": "16.jpg",
-    "answer": "nikita"
+    "answer": "alexey"
   },
   {
     "src": "17.jpeg",
@@ -69,46 +69,46 @@
   },
   {
     "src": "18.jpeg",
-    "answer": "nikita"
+    "answer": "adrian"
   },
   {
     "src": "19.jpeg",
-    "answer": "roman"
+    "answer": "obuchowski"
   },
   {
     "src": "20.jpeg",
-    "answer": "leraM"
+    "answer": "ula"
   },
   {
     "src": "21.jpg",
-    "answer": "roman"
+    "answer": "polina"
   },
   {
     "src": "22.jpeg",
-    "answer": "leraM"
+    "answer": "wlad"
   },
   {
     "src": "23.jpeg",
-    "answer": "leraM"
+    "answer": "nikita"
   },
   {
     "src": "24.jpg",
-    "answer": "nika"
+    "answer": "leraM"
   },
   {
     "src": "25.jpeg",
-    "answer": "paulina"
+    "answer": "ula"
   },
   {
     "src": "26.jpeg",
-    "answer": "paulina"
+    "answer": "leraP"
   },
   {
     "src": "27.jpeg",
-    "answer": "paulina"
+    "answer": ["alesia", "ula"]
   },
   {
     "src": "28.jpeg",
-    "answer": "paulina"
+    "answer": "anastasia"
   }
 ]
