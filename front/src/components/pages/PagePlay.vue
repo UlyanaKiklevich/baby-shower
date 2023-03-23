@@ -35,10 +35,12 @@
                 'pulse': scoreAnimation
                 }">
             {{ getName(questions[counter].answer) }}
-            {{ getCorrectPercentage(counter) }} %
+            <span :class="{
+              'text-red-500': getCorrectPercentage(counter) === 0
+            }">{{ getCorrectPercentage(counter) }} %</span>
           </div>
-          <div class="slideRight">
-            <div v-for="name in howWasCalled(questions[counter].answer, counter)" v-text="name" :key="name" />
+          <div class="slideRight text-red-500 text-5xl" v-if="otherNames.length">
+            <div v-for="name in otherNames" v-text="name" :key="name" />
           </div>
         </div>
       </div>
@@ -50,6 +52,7 @@ import AppHeader from '@/src/components/AppHeader'
 import { onMounted, ref } from 'vue'
 import questions from '@/data/questions'
 import useMessenger from '@/composables/useMessenger'
+import router from "@/src/router";
 
 const counter = ref(0)
 
@@ -69,13 +72,26 @@ onMounted(() => {
         startAgain.value = true
         enableAnimation.value = false
         score.value = -1
+        otherNames.value = []
+        setTimeout(() => {
+          otherNames.value = howWasCalled(questions[counter.value].answer, counter.value)
+        }, 1000)
         return
       }
 
-      if (startAgain.value) {
+      if (startAgain.value && counter.value < questions.length - 1) {
         counter.value ++
+        otherNames.value = []
+        setTimeout(() => {
+          otherNames.value = howWasCalled(questions[counter.value].answer, counter.value)
+        }, 1000)
         return
       }
+
+      if (startAgain.value && counter.value === questions.length - 1) {
+        router.push({ path: '/results' })
+      }
+
 
       if (enableAnimation.value) {
         enableAnimation.value = false
@@ -100,5 +116,7 @@ onMounted(() => {
     }
   })
 })
+
+const otherNames = ref([])
 </script>
 

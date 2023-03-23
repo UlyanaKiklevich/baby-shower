@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from 'vue-router'
 import PageAdmin from '@/src/components/pages/PageAdmin'
 import PageGame from '@/src/components/pages/PageGame'
 import PagePlay from '@/src/components/pages/PagePlay'
+import PageResults from '@/src/components/pages/PageResults'
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     name: 'PagePlay',
     component: PagePlay,
   },
+  {
+    path: '/results',
+    name: 'PageResults',
+    component: PageResults,
+  }
 ];
 
 const router = createRouter({

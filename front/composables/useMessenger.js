@@ -67,7 +67,7 @@ export default () => {
     return names.find(({ key }) => key === answer).title
   }
 
-  const howWasCalled = (answer, num) => {
+  const  howWasCalled = (answer, num) => {
     const names = Object.keys(results.value)
     const set = new Set()
     names.forEach(name => {
@@ -75,6 +75,18 @@ export default () => {
     })
 
     return [ ...set ].filter(name => name !== answer).map(name => getName(name))
+  }
+
+  const userCorrectStatistics = name => {
+    const counter = results.value[name].reduce((acc, el) => {
+      if (el.isCorrect) {
+        acc ++
+      }
+
+      return acc
+    }, 0)
+
+    return counter * 100 / results.value[name].length
   }
 
   return {
@@ -86,6 +98,7 @@ export default () => {
     addAnswer,
     getCorrectPercentage,
     howWasCalled,
-    getName
+    getName,
+    userCorrectStatistics
   }
 }
